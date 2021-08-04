@@ -7,7 +7,6 @@ from django.db.models.deletion import SET_NULL
 
 from auth_users.models import YamdbUser
 
-
 User = YamdbUser
 
 

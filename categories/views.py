@@ -1,14 +1,11 @@
-from rest_framework import mixins
-from rest_framework import viewsets, filters
-
 from django.db.models import Avg
-
 from django_filters.rest_framework import DjangoFilterBackend
+from rest_framework import filters, mixins, viewsets
 
-from .models import Category, Genre, Title
 from .filters import TitleFilter
-from .serializers import CategorySerializer, GenreSerializer, TitleSerializer
+from .models import Category, Genre, Title
 from .permissions import HasAdminRoleOrRead
+from .serializers import CategorySerializer, GenreSerializer, TitleSerializer
 
 
 class DeleteViewSet(mixins.DestroyModelMixin,

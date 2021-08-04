@@ -1,18 +1,16 @@
-from rest_framework import permissions
-from rest_framework.response import Response
-from rest_framework import viewsets, generics, status
-from rest_framework.decorators import api_view, permission_classes
-
-from rest_framework_simplejwt.tokens import RefreshToken
-
 from django.core.mail import send_mail
 from django.shortcuts import get_object_or_404
 from django.utils.crypto import get_random_string
+from rest_framework import generics, permissions, status, viewsets
+from rest_framework.decorators import api_view, permission_classes
+from rest_framework.response import Response
+from rest_framework_simplejwt.tokens import RefreshToken
+
+from api_yamdb.settings import EMAIL_HOST
 
 from .models import YamdbUser
 from .permissions import HasAdminRole
 from .serializers import ListUsersSerializer
-from api_yamdb.settings import EMAIL_HOST
 
 
 class CurrentUserViewSet(generics.RetrieveUpdateAPIView):

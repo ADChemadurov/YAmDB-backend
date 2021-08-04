@@ -1,10 +1,9 @@
 from django.urls import path
 from django.urls.conf import include
-
 from rest_framework.routers import DefaultRouter
 from rest_framework_simplejwt.views import TokenRefreshView
 
-from .views import AllUserViewSet, CurrentUserViewSet, send_email, get_token
+from .views import AllUserViewSet, CurrentUserViewSet, get_token, send_email
 
 v1_router = DefaultRouter()
 v1_router.register(r'users', AllUserViewSet, basename='list_all_users')
