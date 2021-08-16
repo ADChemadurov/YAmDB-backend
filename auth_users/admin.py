@@ -56,7 +56,9 @@ class YamdbUserAdmin(UserAdmin):
     """ Кастомная модель пользователя. """
     form = UserChangeForm
     add_form = UserCreationForm
-    list_display = ('pk', 'username', 'email', 'bio', 'role', 'confirmation_code')
+    list_display = (
+        'pk', 'username', 'email', 'bio', 'role', 'confirmation_code'
+    )
     list_filter = ('role',)
     fieldsets = (
         (None, {'fields': ('email', 'password')}),
