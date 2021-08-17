@@ -1,6 +1,7 @@
 name: Django-app workflow
 
 on: [push]
+if: github.ref == 'refs/heads/master'
 
 jobs:
   tests:
