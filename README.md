@@ -127,9 +127,3 @@ sudo docker-compose exec web python manage.py loaddata fixtures.json
 - Docker Hub
 - GitHub Actions
 - Telegram
-
-
-## Об авторе
-
-Автор этого проекта студент Яндекс.Практикума 12 когорты Чемадуров Артём :)
-Посмотреть рабочий проект вы можете по следующему адресу: 178.154.222.148
